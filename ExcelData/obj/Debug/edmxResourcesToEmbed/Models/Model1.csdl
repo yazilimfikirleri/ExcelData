@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelDenemeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kolon1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="kolon2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="kolon3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ExcelDenemeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tests" EntityType="Self.Test" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("ImportFile", "Test", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row" style="margin-top:25px;">
+        <div class="col-sm-12" style="padding-bottom:20px">
+            <div class="col-sm-2">
+                <span>Dosya Seç  :</span>
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" type="file" name="postedFile" id="importFile" />
+            </div>
+            <div class="col-sm-3">
+                <input class="btn btn-primary" id="btnUpload" type="submit" value="Yükle" />
+            </div>
+        </div>
+    </div>
+}
+
